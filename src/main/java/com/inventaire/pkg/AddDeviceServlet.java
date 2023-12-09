@@ -67,16 +67,14 @@ public class AddDeviceServlet extends HttpServlet {
 			if(!res.next()) {
 				
 //				Instantiate a hardware object
-//				instancier un objet de type materiel
 				Product device = new Product(code, type, brand, model, system, storage, cpu, devices, service, location, user, status);
 
 				DeviceDAO deviceMap = new DeviceDAO();
 				
 //				Method for Registering Material
-//				methode permettant d'enregistrer un materiel
 				deviceMap.saveDevice(device);
 				
-//				renvoie de la page deviceAdd.jsp
+//				returns from the deviceAdd.jsp page
 				this.getServletContext().getRequestDispatcher("/WEB-INF/deviceAdd.jsp").forward(request, response);
 			}
 			else {
