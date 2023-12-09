@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>inventaire</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>AddUsers</servlet-name>
+  	<servlet-class>com.inventaire.pkg.AddUsersServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AddUsers</servlet-name>
+  	<url-pattern>/pkg</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>AuthenticationServlet</servlet-name>
+  	<servlet-class>com.inventaire.pkg.AuthenticationServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AuthenticationServlet</servlet-name>
+  	<url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>AddDeviceServlet</servlet-name>
+  	<servlet-class>com.inventaire.pkg.AddDeviceServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AddDeviceServlet</servlet-name>
+  	<url-pattern>/deviceAdd</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DeviceViewServlet</servlet-name>
+  	<servlet-class>com.inventaire.pkg.DeviceViewServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>DeviceViewServlet</servlet-name>
+  	<url-pattern>/deviceView</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DeviceDeleteServlet</servlet-name>
+  	<servlet-class>com.inventaire.pkg.DeviceDeleteServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>DeviceDeleteServlet</servlet-name>
+  	<url-pattern>/deviceDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DeviceSearchServlet</servlet-name>
+  	<servlet-class>com.inventaire.pkg.DeviceSearchServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>DeviceSearchServlet</servlet-name>
+  	<url-pattern>/deviceSearch</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>AllDevServlet</servlet-name>
+  	<servlet-class>com.inventaire.pkg.AllDevServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AllDevServlet</servlet-name>
+  	<url-pattern>/allDevice</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>UserModuleServlet</servlet-name>
+  	<servlet-class>com.inventaire.pkg.UserModuleServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>UserModuleServlet</servlet-name>
+  	<url-pattern>/userModule</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>AdminServlet</servlet-name>
+  	<servlet-class>com.inventaire.pkg.AdminServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AdminServlet</servlet-name>
+  	<url-pattern>/admin</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>statServlet</servlet-name>
+  	<servlet-class>com.stat.pkg.statServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>statServlet</servlet-name>
+  	<url-pattern>/stat</url-pattern>
+  </servlet-mapping>
+  
+  <jsp-config>
+  	<jsp-property-group>
+  		<url-pattern>*.jsp</url-pattern>
+  		<include-prelude>/WEB-INF/jstltag.jsp</include-prelude>
+  	</jsp-property-group>
+  </jsp-config>
+  	
+</web-app>

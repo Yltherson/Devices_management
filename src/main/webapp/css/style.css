@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+/*style pour le formulaire d'ajout de materiels*/
+
+
+#customers th {
+  background-color: #04AA6D;
+  color: white;
+}
